@@ -1,0 +1,41 @@
+body.customLoadingBlock {
+    height:100%;
+    overflow:hidden;
+}
+html > .customLoadingModal {
+    width:100%;
+    height:100%;
+    position: fixed;
+    background: rgb(0, 0, 0, 0.85);
+    z-index: 10000;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+html > .customLoadingModal > .customLoading {
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    margin:0 auto;
+}
+
+@media ( max-width: 768px ) {
+    html > .customLoadingModal > .customLoading {
+        width: 15vw;
+        height: 15vw;
+    }
+}
+
+@keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
